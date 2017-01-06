@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 import FacebookLogin
 import FacebookCore
 import FacebookShare
@@ -16,21 +15,15 @@ class ViewController: UIViewController , LoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if let accessToken = AccessToken.current {
             print(accessToken)
-        }else{
-            let loginButton = LoginButton(readPermissions: [ ReadPermission.publicProfile, ReadPermission.email, ReadPermission.userFriends ])
-            loginButton.delegate = self
-            loginButton.center = view.center
-            view.addSubview(loginButton)
         }
+        let loginButton = LoginButton(readPermissions: [ ReadPermission.publicProfile, ReadPermission.email, ReadPermission.userFriends ])
+        loginButton.delegate = self
+        loginButton.center = view.center
+        view.addSubview(loginButton)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
     func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult){
         print(result)
         switch result {
@@ -48,6 +41,13 @@ class ViewController: UIViewController , LoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: LoginButton){
         print("Loged out")
     }
+
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    
+    }
+
 
 }
 
