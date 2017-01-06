@@ -6,9 +6,9 @@ target 'FacebookSDK' do
 	use_frameworks!
 
   # Pods for FacebookSDK
-	pod 'Bolts'
-	pod 'FBSDKCoreKit'
-	pod 'FBSDKShareKit'
-	pod 'FBSDKLoginKit'
+  
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
+    pod 'FacebookShare'
 
 end
