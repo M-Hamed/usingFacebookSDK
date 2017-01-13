@@ -1,2 +1,3 @@
-# usingFacebookSDK-
-Getting Started with the Facebook SDK for iOS
+# Using FacebookSDK
+Getting Started with the Facebook Swift SDK for iOS
+
