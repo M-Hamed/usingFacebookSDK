@@ -39,7 +39,26 @@ class ViewController: UIViewController {
                 print(grantedPermissions)
                 print(declinedPermissions)
                 print(accessToken)
-                print("Logged in!")
+                
+                let params = ["fields":"id,email,name,first_name,last_name,picture.width(1000).height(1000),gender,cover"]
+                let graphRequest = GraphRequest(graphPath: "me", parameters: params)
+                graphRequest.start {
+                    (urlResponse, requestResult) in
+                    
+                    switch requestResult {
+                    case .success(let graphResponse):
+                        if let responseDictionary = graphResponse.dictionaryValue {
+                            
+                            let user = FBUser(dictionary: responseDictionary)
+                            print(user.email)
+                        }
+                    case .failed(let error):
+                        print("error in graph request:", error)
+                        break
+                        
+                    }
+                }
+                
             }
         }
     }
