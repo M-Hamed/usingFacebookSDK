@@ -50,7 +50,9 @@ class ViewController: UIViewController {
                         if let responseDictionary = graphResponse.dictionaryValue {
                             
                             let user = FBUser(dictionary: responseDictionary)
-                            print(user.email)
+                            self.showAlert(title: user.name, message: user.email)
+                            
+                            
                         }
                     case .failed(let error):
                         print("error in graph request:", error)
@@ -62,7 +64,18 @@ class ViewController: UIViewController {
             }
         }
     }
-    
+    func showAlert(title : String , message : String) {
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+        {
+            (result : UIAlertAction) -> Void in
+        }
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
