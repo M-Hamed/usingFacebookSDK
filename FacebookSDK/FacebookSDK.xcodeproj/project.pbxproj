@@ -12,6 +12,7 @@
 		055D4A521E1FFB9D0009167B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 055D4A501E1FFB9D0009167B /* Main.storyboard */; };
 		055D4A541E1FFB9D0009167B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 055D4A531E1FFB9D0009167B /* Assets.xcassets */; };
 		055D4A571E1FFB9D0009167B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 055D4A551E1FFB9D0009167B /* LaunchScreen.storyboard */; };
+		057D1A881E28DC6A00A270A6 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057D1A871E28DC6A00A270A6 /* UIButtonExtensions.swift */; };
 		761C6D4B02F2C107F5251531 /* Pods_FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5084E43B328E3F1B8D32F786 /* Pods_FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		055D4A561E1FFB9D0009167B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		055D4A581E1FFB9D0009167B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		055D4A5E1E202D4C0009167B /* FacebookSDK.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FacebookSDK.entitlements; sourceTree = "<group>"; };
+		057D1A871E28DC6A00A270A6 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		47E376A18EF7417F146D8251 /* Pods-FacebookSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FacebookSDK/Pods-FacebookSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		5084E43B328E3F1B8D32F786 /* Pods_FacebookSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FacebookSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1C62843684DF4123FC752D /* Pods-FacebookSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-FacebookSDK/Pods-FacebookSDK.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		055D4A4B1E1FFB9D0009167B /* FacebookSDK */ = {
 			isa = PBXGroup;
 			children = (
+				057D1A861E28DBEB00A270A6 /* Extensions */,
 				055D4A5E1E202D4C0009167B /* FacebookSDK.entitlements */,
 				055D4A4C1E1FFB9D0009167B /* AppDelegate.swift */,
 				055D4A4E1E1FFB9D0009167B /* ViewController.swift */,
@@ -71,6 +74,14 @@
 				055D4A581E1FFB9D0009167B /* Info.plist */,
 			);
 			path = FacebookSDK;
+			sourceTree = "<group>";
+		};
+		057D1A861E28DBEB00A270A6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				057D1A871E28DC6A00A270A6 /* UIButtonExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		0DEB35DCDD51780C144017D5 /* Frameworks */ = {
@@ -219,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057D1A881E28DC6A00A270A6 /* UIButtonExtensions.swift in Sources */,
 				055D4A4F1E1FFB9D0009167B /* ViewController.swift in Sources */,
 				055D4A4D1E1FFB9D0009167B /* AppDelegate.swift in Sources */,
 			);
